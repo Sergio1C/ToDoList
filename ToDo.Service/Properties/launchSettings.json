@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "SampleApp": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "todo",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:56989;http://localhost:56990"
+    }
+  }
+}
