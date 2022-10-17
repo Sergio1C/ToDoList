@@ -268,7 +268,8 @@ ServiceFabricBackup/
 *.ldf
 *.ndf
 
-#SQlite database files
+# SQlite database files
+*.db
 *.db-shm
 *.db-wal
 
@@ -456,5 +457,9 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+*.js
+*.js.map
 
 log.txt
+
+
