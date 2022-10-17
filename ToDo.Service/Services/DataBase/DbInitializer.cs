@@ -5,13 +5,14 @@ namespace ToDo.Services.DataBase
 {
     public static class DbInitializer
     {
-        public static void Initialize(ToDoDbContext context)
+        public static void Initialize(ToDoDbContext context, ILogger logger)
         {
             context.Database.EnsureCreated();
 
             // Look for any Deals.
             if (context.Deals.Any())
             {
+                logger.LogInformation("Database has already been seeded.Skip seeding.");
                 return;   // DB has been seeded
             }
 
@@ -32,6 +33,7 @@ namespace ToDo.Services.DataBase
             }
             
             context.SaveChanges();
+            logger.LogInformation("Database has been completely seeded.");
         }
     }
 }

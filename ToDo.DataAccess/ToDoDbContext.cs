@@ -1,5 +1,6 @@
 using ToDo.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
+using ILogger = Serilog.ILogger;
 
 namespace ToDo.DataAccess
 {
@@ -7,9 +8,9 @@ namespace ToDo.DataAccess
     {
         public virtual DbSet<Deal> Deals { get; set; }
 
-        public ToDoDbContext(DbContextOptions<ToDoDbContext> dbContextOptions) : base(dbContextOptions)
+        public ToDoDbContext(DbContextOptions<ToDoDbContext> dbContextOptions, ILogger logger) : base(dbContextOptions)
         {
-            Console.WriteLine("dbContext created: " + this.ContextId);
+            logger.Information($"{nameof(ToDoDbContext)} created. Context Id: {this.ContextId}");
         }
     }
 }
