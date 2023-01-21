@@ -1,0 +1,5 @@
+<div class="container">
+    <input type="checkbox" [(ngModel)]="todo.checked" class="card" (ngModelChange)="OnCheckedChanged(todo.id, $event)">
+    <input type="text" [(ngModel)]="todo.name" (ngModelChange)="OnNameChanged(todo.id, $event)">
+    <button type="button" (click)="OnDeleteClicked(todo.id)">Delete</button>
+</div>

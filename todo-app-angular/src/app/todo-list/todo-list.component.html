@@ -1,0 +1,23 @@
+<div class="сard-container">
+    <button type="button" (click)="Create(undefined)">
+        New task
+    </button>
+    <button type="button" (click)="''">
+        New subtask
+    </button>
+</div>
+<pre>kendo treeview</pre>
+<kendo-treeview [nodes]="todo_three"
+                textField="text"
+                kendoTreeViewHierarchyBinding
+                childrenField="items"
+                kendoTreeViewSelectable
+                >
+                <ng-template kendoTreeViewNodeTemplate let-dataItem let-index="index">
+                    <app-todo-item [todo]="getTodoById(dataItem.id)"
+                    (todoChange)="Change($event)"
+                    (todoDelete)="Delete($event)">
+                    </app-todo-item>
+                  </ng-template>
+</kendo-treeview>
+
