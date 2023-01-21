@@ -13,7 +13,7 @@
           :active="[$data.active]"
           @update:active="
             (arr) => {
-              this.$data.active = arr.pop() ?? 0;
+              this.$data.active = arr.pop() || 0;
             }
           "
         >
@@ -51,7 +51,7 @@ export default class ToDoList extends Vue {
     console.log("mounted");
     this.InitData();
   }
-dataLoaded: boolean;
+  dataLoaded = false;
   items = Array<ToDo>();
   tree = Array<TreeItem>();
   selection = Array<number>();

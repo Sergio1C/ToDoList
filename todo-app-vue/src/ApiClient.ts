@@ -1,6 +1,6 @@
 class ApiClient
 {
-    private webApiHost = "http://localhost:5000/todo";
+    private webApiHost = "https://localhost:56989/todo";
 
     getAll(): Promise<Array<ToDo>>
     {
