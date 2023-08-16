@@ -6,5 +6,5 @@ A simple implementation of "to do list" (as an example of CRUD) written on the f
   
 Client apps (different frameworks doing the same functionality):
   
-3. todo-app-angular: SPA based on Angular
+3. todo-app-angular: SPA based on Angular + Kendo UI
 4. todo-app-vue: SPA based on Vue.js + Vuetify
